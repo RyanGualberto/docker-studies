@@ -12,6 +12,21 @@ MENU="
 6 - List branches
 "
 
+COMMIT_OPTIONS="
+1 - Add
+2 - Rename
+3 - Delete
+4 - Config
+5 - Dependencies
+6 - Docs
+7 - Feature
+8 - Fix
+9 - Refactor
+10 - Style
+11 - Test
+12 - Other
+"
+
 echo "$MENU"
 
 read -p "Escolha uma opção do menu: " OPCAO
@@ -41,19 +56,16 @@ case "$OPCAO" in
         echo "----------------------------------------------------------------"
         echo "updated and creating the new branch"
         echo "----------------------------------------------------------------"
-        read -p "type the new branch name " NEWBRANCH
-        git branch $NEWBRANCH
-        git checkout $NEWBRANCH
+        read -p "type the new branch name" NEWBRANCH
+        git branch -m $NEWBRANCH
         echo "----------------------------------------------------------------"
         echo "created and changed to the new branch"
         echo "------------------------------END-------------------------------"
 	;;
 
 	3)
-		git add .
-        read -p "Type your commit " NEWCOMMIT
-        git commit -m "$NEWCOMMIT"
-        git status 
+        echo "$COMMIT_OPTIONS"
+        read -p "Qual commit deseja fazer?  " COMMIT_OPTION
 	;;
 
 	4)
@@ -61,7 +73,7 @@ case "$OPCAO" in
         echo "Listing all local branches"
         echo "----------------------------------------------------------------"
 		git branch
-		read -p "type the branch name " CHANGEBRANCH
+		read -p "type the branch name" CHANGEBRANCH
         git add .
         git commit -m "save and changing branch"
         echo "----------------------------------------------------------------"
@@ -75,7 +87,7 @@ case "$OPCAO" in
     
     5)
         git branch --show-current
-        read -p "Type name of your current branch " CURRENTBRANCH
+        read -p "Type name of your current branch" CURRENTBRANCH
         echo "----------------------------------------------------------------"
         echo "saving current changes on current branch"
         echo "----------------------------------------------------------------"
@@ -101,4 +113,84 @@ case "$OPCAO" in
 		echo "Opção $OPCAO desconhecida!"
 		exit 1
 	;;
+esac
+
+case "$COMMIT_OPTION" in 
+    1)
+		git add .
+        git commit -m "Add $NEWCOMMIT"
+        git status
+    ;;
+
+    2)
+		git add .
+        git commit -m "Rename $NEWCOMMIT"
+        git status
+    ;;
+
+    3)
+		git add .
+        git commit -m "Delete $NEWCOMMIT"
+        git status
+    ;;
+
+    4)
+		git add .
+        git commit -m "Config $NEWCOMMIT"
+        git status
+    ;;
+
+    5)
+		git add .
+        git commit -m "Dependencies $NEWCOMMIT"
+        git status
+    ;;
+
+    6)
+		git add .
+        git commit -m "Docs $NEWCOMMIT"
+        git status
+    ;;
+
+    7)
+		git add .
+        git commit -m "Feature $NEWCOMMIT"
+        git status
+    ;;
+
+    8)
+		git add .
+        git commit -m "Fix $NEWCOMMIT"
+        git status
+    ;;
+
+    9)
+		git add .
+        git commit -m "Refactor $NEWCOMMIT"
+        git status
+    ;;
+
+    10)
+		git add .
+        git commit -m "Style $NEWCOMMIT"
+        git status
+    ;;
+
+    11)
+		git add .
+        git commit -m "Test $NEWCOMMIT"
+        git status
+    ;;
+
+    12)
+		git add .
+        git commit -m "Other $NEWCOMMIT"
+        git status
+    ;;
+
+    *)
+        echo "Opção $COMMIT_OPTION desconhecida!"
+        exit 1
+        git status
+    ;;
 esac
