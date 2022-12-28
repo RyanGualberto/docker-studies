@@ -57,7 +57,8 @@ case "$OPCAO" in
         echo "updated and creating the new branch"
         echo "----------------------------------------------------------------"
         read -p "type the new branch name" NEWBRANCH
-        git branch -m $NEWBRANCH
+        git branch  $NEWBRANCH
+        git checkout  $NEWBRANCH
         echo "----------------------------------------------------------------"
         echo "created and changed to the new branch"
         echo "------------------------------END-------------------------------"
