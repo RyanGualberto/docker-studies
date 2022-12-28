@@ -120,89 +120,76 @@ case "$COMMIT_OPTION" in
         read -p "Type the commit: " NEWCOMMIT    
 		git add .
         git commit -m "Add: $NEWCOMMIT"
-        git status
     ;;
 
     2)
         read -p "Type the commit: " NEWCOMMIT    
 		git add .
         git commit -m "Rename: $NEWCOMMIT"
-        git status
     ;;
 
     3)
         read -p "Type the commit: " NEWCOMMIT    
 		git add .
         git commit -m "Delete: $NEWCOMMIT"
-        git status
     ;;
 
     4)
         read -p "Type the commit: " NEWCOMMIT    
 		git add .
         git commit -m "Config: $NEWCOMMIT"
-        git status
     ;;
 
     5)
         read -p "Type the commit: " NEWCOMMIT    
 		git add .
         git commit -m "Dependencies: $NEWCOMMIT"
-        git status
     ;;
 
     6)
         read -p "Type the commit: " NEWCOMMIT    
 		git add .
         git commit -m "Docs: $NEWCOMMIT"
-        git status
     ;;
 
     7)
         read -p "Type the commit: " NEWCOMMIT    
 		git add .
         git commit -m "Feature: $NEWCOMMIT"
-        git status
     ;;
 
     8)
         read -p "Type the commit: " NEWCOMMIT    
 		git add .
         git commit -m "Fix: $NEWCOMMIT"
-        git status
     ;;
 
     9)
         read -p "Type the commit: " NEWCOMMIT    
 		git add .
         git commit -m "Refactor: $NEWCOMMIT"
-        git status
     ;;
 
     10)
         read -p "Type the commit: " NEWCOMMIT    
 		git add .
         git commit -m "Style: $NEWCOMMIT"
-        git status
     ;;
 
     11)
         read -p "Type the commit: " NEWCOMMIT    
 		git add .
         git commit -m "Test: $NEWCOMMIT"
-        git status
     ;;
 
     12)
         read -p "Type the commit: " NEWCOMMIT    
 		git add .
         git commit -m "Other: $NEWCOMMIT"
-        git status
     ;;
 
     *)
         echo "Opção $COMMIT_OPTION desconhecida!"
         exit 1
-        git status
     ;;
 esac
