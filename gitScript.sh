@@ -13,18 +13,18 @@ MENU="
 "
 
 COMMIT_OPTIONS="
-1 - Add:
-2 - Rename:
-3 - Delete:
-4 - Config:
-5 - Dependencies:
-6 - Docs:
-7 - Feature:
-8 - Fix:
-9 - Refactor:
+1 - Add
+2 - Rename
+3 - Delete
+4 - Config
+5 - Dependencies
+6 - Docs
+7 - Feature
+8 - Fix
+9 - Refactor
 10 - Style
-11 - Test:
-12 - Other:
+11 - Test
+12 - Other
 "
 
 echo "$MENU"
@@ -119,84 +119,84 @@ case "$COMMIT_OPTION" in
     1)
         read -p "Type the commit: " NEWCOMMIT    
 		git add .
-        git commit -m "Add $NEWCOMMIT"
+        git commit -m "Add: $NEWCOMMIT"
         git status
     ;;
 
     2)
         read -p "Type the commit: " NEWCOMMIT    
 		git add .
-        git commit -m "Rename $NEWCOMMIT"
+        git commit -m "Rename: $NEWCOMMIT"
         git status
     ;;
 
     3)
         read -p "Type the commit: " NEWCOMMIT    
 		git add .
-        git commit -m "Delete $NEWCOMMIT"
+        git commit -m "Delete: $NEWCOMMIT"
         git status
     ;;
 
     4)
         read -p "Type the commit: " NEWCOMMIT    
 		git add .
-        git commit -m "Config $NEWCOMMIT"
+        git commit -m "Config: $NEWCOMMIT"
         git status
     ;;
 
     5)
         read -p "Type the commit: " NEWCOMMIT    
 		git add .
-        git commit -m "Dependencies $NEWCOMMIT"
+        git commit -m "Dependencies: $NEWCOMMIT"
         git status
     ;;
 
     6)
         read -p "Type the commit: " NEWCOMMIT    
 		git add .
-        git commit -m "Docs $NEWCOMMIT"
+        git commit -m "Docs: $NEWCOMMIT"
         git status
     ;;
 
     7)
         read -p "Type the commit: " NEWCOMMIT    
 		git add .
-        git commit -m "Feature $NEWCOMMIT"
+        git commit -m "Feature: $NEWCOMMIT"
         git status
     ;;
 
     8)
         read -p "Type the commit: " NEWCOMMIT    
 		git add .
-        git commit -m "Fix $NEWCOMMIT"
+        git commit -m "Fix: $NEWCOMMIT"
         git status
     ;;
 
     9)
         read -p "Type the commit: " NEWCOMMIT    
 		git add .
-        git commit -m "Refactor $NEWCOMMIT"
+        git commit -m "Refactor: $NEWCOMMIT"
         git status
     ;;
 
     10)
         read -p "Type the commit: " NEWCOMMIT    
 		git add .
-        git commit -m "Style $NEWCOMMIT"
+        git commit -m "Style: $NEWCOMMIT"
         git status
     ;;
 
     11)
         read -p "Type the commit: " NEWCOMMIT    
 		git add .
-        git commit -m "Test $NEWCOMMIT"
+        git commit -m "Test: $NEWCOMMIT"
         git status
     ;;
 
     12)
         read -p "Type the commit: " NEWCOMMIT    
 		git add .
-        git commit -m "Other $NEWCOMMIT"
+        git commit -m "Other: $NEWCOMMIT"
         git status
     ;;
 
