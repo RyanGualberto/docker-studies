@@ -51,7 +51,7 @@ case "$OPCAO" in
 
 	3)
 		git add .
-        read -p "Type your commit" NEWCOMMIT
+        read -p "Type your commit " NEWCOMMIT
         git commit -m "$NEWCOMMIT"
         git status 
 	;;
